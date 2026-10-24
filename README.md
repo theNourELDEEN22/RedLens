@@ -45,6 +45,17 @@ Findings:
 Measured on LLM-judged replies only; replies containing the secret verbatim use the deterministic rule.
 With 49 samples the plausible range is roughly 89-99%.
 
+## Report
+
+Every run produces a Markdown report with the overall success rate, a breakdown by attack
+type and language, the attacks that worked in every repeat, and the judge's agreement with
+human labels.
+
+- Sample report: [report.md](report.md)
+- Regenerate it after a run:
+
+      python reports/report.py
+
 ## Limitations
 
 - One target model and one system prompt.
